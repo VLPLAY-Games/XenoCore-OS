@@ -1,0 +1,10 @@
+bool InitialSetupPassed = false;
+const char* version = "v0.4";
+String username = "";
+String password = "";
+String ssidNet = "";
+String passwordNet = "";
+String deviceName = "";
+byte utcTime = 0;
+bool utcTimePlus = false;
+bool serverAlwaysOn = false;
