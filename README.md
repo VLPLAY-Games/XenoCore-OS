@@ -1,4 +1,4 @@
-# XenoCore-OS
+# XenoCore-OS (in development)
 Here are the files for updating my future smart "watch"
 
 All information is preliminary and subject to change.
