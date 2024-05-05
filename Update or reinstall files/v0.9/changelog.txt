@@ -1,0 +1,34 @@
+
+XenoCoreOS v0.9.0 update
+
+Added Wifi scanner
+Added an indication of which network the watch is connected to in the wifi settings
+Completely redesigned explorer
+Added a new sensor readings page to the website
+Added back button to keyboard
+Fixed a bug with switching to sleep mode in settings
+Added check for critical errors in the system
+Fixed critical RAM leak bug
+Added "black screen" for critical system errors
+Added button to reconnect to wifi
+Added recording of system events to the log.txt file
+Added a back button to all pages of the site
+Added a new settings page to the site
+Added clock management via the website
+Added highlighting of high sensor readings
+Libraries updated to latest versions
+Fixed a critical error when automatically updating the system
+Improved file download times for automatic updates
+Improved auto-update reliability
+Various bugs fixed
+The initial setup logic has been completely changed
+Added display recalibration function to settings
+
+XenoApp v0.2.0 update
+
+Added version entry to the application
+The application icon has been replaced with a clearer one
+Added placeholders to the Info field values
+Changed button sizes
+Changed button design
+Added receiving information from watches
