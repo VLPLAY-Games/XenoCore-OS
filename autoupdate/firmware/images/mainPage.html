@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="/xc_logo_site.ico">
+    <title>Main Page</title>
+  </head>
+  <body>
+    <div id='update-container'>
+      <img id='header-image' src='/xc_logo_white.jpeg' alt='Your Image'>
+    </div>
+    <h2>XenoClock Main Page</h2>
+    <h3>Model - %MODEL%</h3>
+    <h3>Firmware version - %FIRMWARE_VERSION%</h3>
+    <div id='update-container'>
+      <button id='sysupdatepagebtn'>Update system</button>
+    </div>
+    <div id='update-container'>
+      <button id='settingspagebtn'>Settings</button>
+    </div>
+    <div id='update-container'>
+      <button id='aboutpagebtn'>About</button>
+    </div>
+    <div id='update-container'>
+      <button id='sensorspagebtn'>Sensors</button>
+    </div>
+    <div id='update-container'>
+      <a href = "https://vlplay-games.github.io"><button id='btn'>Main Site</button></a>
+    </div>
+    <div id='update-container'>
+      <a href = "https://github.com/VLPLAY-Games/XenoCore-OS"><button id='btn'>XenoCoreOS Github</button></a>
+    </div>
+    <div id='update-container'>
+      <button id='logout' onclick='logoutAndRedirect()'>Logout</button>
+    </div>
+    <script>
+      const aboutpagebtn = document.getElementById('aboutpagebtn');
+      aboutpagebtn.addEventListener('click', () => {
+        window.location.href = '/about';
+      });
+
+      const updateButton = document.getElementById('sysupdatepagebtn');
+      updateButton.addEventListener('click', () => {
+        window.location.href = '/updatesystem';
+      });
+      const settingsButton = document.getElementById('settingspagebtn');
+      settingsButton.addEventListener('click', () => {
+        window.location.href = '/settings';
+      });
+
+      const sensorsButton = document.getElementById('sensorspagebtn');
+      sensorsButton.addEventListener('click', () => {
+        window.location.href = '/sensors';
+      });
+
+
+      function logoutAndRedirect() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/logout", true);
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            // Выход из аккаунта выполнен успешно
+            window.location.href = '/'; // Перенаправление на /
+          }
+        };
+
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  body {
+      margin:0;
+      padding:0;
+      font-family: sans-serif;
+      background: linear-gradient(#141e30, #243b55);
+  }
+
+  #update-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #sysupdatepagebtn, #aboutpagebtn, #btn, #logout, #sensorspagebtn, #settingspagebtn{
+    display: inline-block;
+    padding: 20px;
+    width: 200px;
+    background-color: #03e9f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+     background: linear-gradient(90deg, transparent, #03e9f4);
+     animation: btn-anim1 1s linear infinite;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  #sysupdatepagebtn:hover, #aboutpagebtn:hover, #btn:hover, #logout:hover, #sensorspagebtn:hover, #settingspagebtn:hover{
+    background: #03e9f4;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #03e9f4,
+                  0 0 25px #03e9f4,
+                  0 0 50px #03e9f4,
+                  0 0 100px #03e9f4;
+  }
+
+  h2, h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffffff
+  }
+
+  #header-image {
+    max-width: 100%;
+    height: auto;
+  }
+</style>

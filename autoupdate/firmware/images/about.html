@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/xc_logo_site.ico">
+  <title>XenoClock About</title>
+  <style>
+  html{
+  height: 100%;
+    body {
+      margin:0;
+      padding:0;
+      font-family: sans-serif;
+      background: linear-gradient(#141e30, #243b55);
+    }
+    table {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 400px;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,.5);
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 50%;
+      margin: 20px auto;
+    }
+    td {
+
+      background: rgba(0,0,0,.5);
+      padding: 10px;
+      text-align: left;
+      color: #03e9f4;
+    }
+    td:first-child {
+      font-weight: bold;
+    }
+    center {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    h2, h3 {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+        color: #fff;
+    }
+    img{
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+    }
+    }
+  </style>
+</head>
+<body>
+    <img id='header-image' src='/xc_logo_white.jpeg' alt='Your Image'>
+    <h2>XenoClock About</h2>
+  <table>
+    <tr>
+        <td>Model:</td>
+        <td>%MODEL%</td>
+      </tr>
+    <tr>
+      <td>Device Name:</td>
+      <td>%DEVICE_NAME%</td>
+    </tr>
+    <tr>
+      <td>Username:</td>
+      <td>%USERNAME%</td>
+    </tr>
+    <tr>
+      <td>Firmware Version:</td>
+      <td>%FIRMWARE_VERSION%</td>
+    </tr>
+    <tr>
+      <td>WIFI:</td>
+      <td>%WIFI%</td>
+    </tr>
+    <tr>
+      <td>Firmware Release Date:</td>
+      <td>%FIRMWARE_RELEASE_DATE%</td>
+    </tr>
+  </table>
+</body>
+</html>
