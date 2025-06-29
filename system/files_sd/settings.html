@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/xc_logo_site.ico">
+<title>Control Panel</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+  }
+  table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Adjust width to fit different resolutions */
+    max-width: 1000px; /* Set max-width for smaller screens */
+    margin: 0 auto; /* Center the table */
+  }
+  td {
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+    text-align: left;
+    color: #03e9f4;
+  }
+  td:first-child {
+    font-weight: bold;
+  }
+  center {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  h2, h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  #header-image {
+    display: block;
+    margin: 0 auto;
+  }
+  button {
+    margin: 0 5px;
+    width: 30%;
+    height: 30px;
+    text-align: center;
+    color: #03e9f4;
+    background: rgba(0,0,0,.5);
+  }
+  #backbtn{
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  margin: 0 5px;
+    width: 10%;
+    height: 30px;
+    text-align: center;
+
+  }
+   h2 {      text-align: center;
+      margin-top: 20px;      font-weight: bold;
+      color: #fff;    }
+</style>
+</head>
+<body>
+<img id='header-image' src='/xc_logo_white.jpeg' alt='Your Image'>
+<h2>XenoClock Control Panel</h2>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Control</td>
+    <td>State</td>
+  </tr>
+  <tr>
+    <td>Bluetooth</td>
+    <td>
+      <button id="bluetoothOnBtn">On</button>
+      <button id="bluetoothOffBtn">Off</button>
+    </td>
+    <td id="bluetoothState">%BL_STATE%</td>
+  </tr>
+  <tr>
+    <td>Web-server startup</td>
+    <td>
+      <button id="webServerOnBtn">On</button>
+      <button id="webServerOffBtn">Off</button>
+    </td>
+    <td id="webServerState">%SERVER_STATE%</td>
+  </tr>
+  <tr>
+    <td>Battery Safe</td>
+    <td>
+      <button id="batterySafeOnBtn">On</button>
+      <button id="batterySafeOffBtn">Off</button>
+    </td>
+    <td id="batterySafeState">%BAT_STATE%</td>
+  </tr>
+  <tr>
+    <td>Sleep mode</td>
+    <td>
+      <button id="sleepModeActivateBtn">Activate</button>
+      <button id="sleepModeInactivateBtn">Inactivate</button>
+    </td>
+    <td id="sleepModeState">%SLEEP_STATE%</td>
+  </tr>
+  <div id ='update-container'>
+    <button id = "backbtn">Back</button>
+  </div>
+</table>
+
+
+<script>
+  const bluetoothOnBtn = document.getElementById('bluetoothOnBtn');
+  const bluetoothOffBtn = document.getElementById('bluetoothOffBtn');
+  const bluetoothState = document.getElementById('bluetoothState');
+  const webServerOnBtn = document.getElementById('webServerOnBtn');
+  const webServerOffBtn = document.getElementById('webServerOffBtn');
+  const webServerState = document.getElementById('webServerState');
+  const batterySafeOnBtn = document.getElementById('batterySafeOnBtn');
+  const batterySafeOffBtn = document.getElementById('batterySafeOffBtn');
+  const batterySafeState = document.getElementById('batterySafeState');
+  const sleepModeActivateBtn = document.getElementById('sleepModeActivateBtn');
+  const sleepModeInactivateBtn = document.getElementById('sleepModeInactivateBtn');
+  const sleepModeState = document.getElementById('sleepModeState');
+  const backbtn = document.getElementById('backbtn');
+
+  backbtn.addEventListener('click', ()=>{window.location.href ='/mainpage';});
+
+  bluetoothOnBtn.addEventListener('click', () => {
+    bluetoothState.textContent = 'On';
+    window.location.href = '/bluetooth_on'
+  });
+
+  bluetoothOffBtn.addEventListener('click', () => {
+    bluetoothState.textContent = 'Off';
+    window.location.href = '/bluetooth_off'
+  });
+
+  webServerOnBtn.addEventListener('click', () => {
+    webServerState.textContent = 'On';
+    window.location.href = '/web_server_on'
+  });
+
+  webServerOffBtn.addEventListener('click', () => {
+    webServerState.textContent = 'Off';
+    window.location.href = '/web_server_off'
+  });
+
+  batterySafeOnBtn.addEventListener('click', () => {
+    batterySafeState.textContent = 'On';
+    window.location.href = '/battery_safe_on'
+  });
+
+  batterySafeOffBtn.addEventListener('click', () => {
+    batterySafeState.textContent = 'Off';
+    window.location.href = '/battery_safe_off'
+  });
+
+  sleepModeActivateBtn.addEventListener('click', () => {
+    sleepModeState.textContent = 'Activate';
+    window.location.href = '/sleep_mode_activate'
+  });
+
+  sleepModeInactivateBtn.addEventListener('click', () => {
+    sleepModeState.textContent = 'Inactivate';
+    window.location.href = '/sleep_mode_inactivate'
+  });
+</script>
+
+</body>
+</html>

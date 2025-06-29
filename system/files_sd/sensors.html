@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en">
+<head>  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="icon" type="image/x-icon" href="/xc_logo_site.ico">
+  <title>XenoClock Sensors</title>  <style>
+    html, body {      height: 100%;
+      margin: 0;      padding: 0;
+      font-family: sans-serif;      background: linear-gradient(#141e30, #243b55);
+    }    table {
+      position: absolute;      top: 50%;
+      left: 50%;      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,.5);      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);      width: 50%; /* Adjust width to fit different resolutions */
+      max-width: 1000px; /* Set max-width for smaller screens */      margin: 0 auto; /* Center the table */
+    }    td {
+      background: rgba(0,0,0,.5);      padding: 10px;
+      text-align: left;      color: #03e9f4;
+    }    td:first-child {
+      font-weight: bold;    }
+    center {      margin-top: 20px;
+      margin-bottom: 20px;    }
+    h2, h3 {      text-align: center;
+      margin-top: 20px;      font-weight: bold;
+      color: #fff;    }
+    img {      display: block;
+      margin: 0 auto;      max-width: 100%;
+      height: auto;    }
+    #header-image {      display: block;
+      margin: 0 auto;    }
+     button{
+    margin: 0  auto;      width: 10%;
+    height: 30px;
+    text-align: center;      color: #03e9f4;
+    position: absolute;      top: 70%;
+      left: 30%;      transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5)
+
+    }
+  </style></head>
+<body>  <img id='header-image' src='/xc_logo_white.jpeg' alt='Your Image'>
+  <h2>XenoClock Sensors</h2>  <table>
+    <tr>      <td>Temperature:</td>
+      <td>%BME680_TEMP%</td>    </tr>
+    <tr>      <td>Humidity:</td>
+      <td>%BME680_HUM%</td>    </tr>
+  <tr>      <td>Pressure:</td>
+      <td>%BME680_PRES%</td>    </tr>
+  <tr>      <td>IAQ:</td>
+      <td>%BME680_IAQ%</td>    </tr>
+      </table></body>
+  <div id ='update-container'>
+    <button id = "backbtn">Back</button>
+  </div>
+<script>
+  const backbtn = document.getElementById('backbtn');
+  backbtn.addEventListener('click', ()=>{window.location.href ='/mainpage';});
+
+</script>
+</html>

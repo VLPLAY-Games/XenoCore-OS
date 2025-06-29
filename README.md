@@ -1,4 +1,4 @@
-# XenoCore-OS (in development)
+# XenoCore-OS (Deprecated)
 Here are the files for updating my future smart "watch"
 
 Description:
@@ -15,8 +15,7 @@ Programming (and non-programming) languages:
 
 3. Android App: AppInventor
 
-
-Status: In development
+Status: Deprecated
 
 Board: ESP32
 
